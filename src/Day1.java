@@ -18,11 +18,9 @@ public class Day1 {
         numMap.put("eight", "e8ight");
         numMap.put("nine", "n9ine");
 
-
         InputDay1 inputDay1 = new InputDay1();
         int sum = 0;
 
-        String a = "kjonetworqmzv9mmthreetxhgvsevenhvq7";
         List<String> s = Arrays.stream(inputDay1.input.split("\\n")).collect(Collectors.toList());
         for (String s1 : s) {
             String newS = s1;

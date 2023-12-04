@@ -57,10 +57,7 @@ public class Day4 {
             // Convert the array to a list of strings
             List<String> numberList = Arrays.asList(numberArray);
             int cardsFound = calculateSumInCardPart2(numberList);
-       /*     for(int i = counter ; i <= cardsFound && counter < inputData.size() ; i++){
-             //   resultList.add(resultList.get(i) +1);
-                resultList.set(i, resultList.get(i) +1);
-            }*/
+
             counter++;
             int j = counter;
             while (j < inputData.size() && cardsFound > 0) {
