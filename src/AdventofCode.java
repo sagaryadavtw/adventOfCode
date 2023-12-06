@@ -8,7 +8,9 @@ public class AdventofCode {
         System.out.println(day3.engine_2("inputs/Day3"));*/
        /* Day4 day4 = new Day4();
         System.out.println(day4.getPointsPart2("inputs/Day4"));*/
-        Day5 day5 = new Day5();
-        System.out.println(day5.getClosestLocation2());
+        /*Day5 day5 = new Day5();
+        System.out.println(day5.getClosestLocation2());*/
+        Day6 day6 = new Day6();
+        System.out.println(day6.getNumberOfWaysToBeatRecord2());
     }
 }
