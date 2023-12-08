@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Util {
 
@@ -44,4 +46,34 @@ public class Util {
             return null; // or handle the exception as appropriate for your application
         }
     }
+
+    public static HashMap<String, String> readKeyValueFromFile(String filePath) {
+        HashMap<String, String> keyValueMap = new HashMap<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String line;
+
+            // Read each line from the file
+            while ((line = br.readLine()) != null) {
+                // Split the line into key and value
+                String[] parts = line.split("\\s+");
+                if (parts.length == 2) {
+                    String key = parts[0];
+                    String value = parts[1];
+
+                    // Store key-value pair in the map
+                    keyValueMap.put(key, value);
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle the exception as appropriate for your application
+        }
+
+        return keyValueMap;
+    }
+
+
+
 }
